@@ -1,0 +1,16 @@
+----- Report Card -----
+Name         : shwini
+Roll No      : 2
+
+Subjects and Marks:
+Maths        : 53
+Physics      : 72
+Chemistry    : 84
+English      : 85
+Computer     : 86
+
+Total Marks  : 380.00 / 500
+Percentage   : 76%
+Grade        : B
+Result       : Pass
+Remark       : Very Good! Aim for the top!

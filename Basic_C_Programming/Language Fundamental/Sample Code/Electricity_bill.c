@@ -34,7 +34,7 @@ int main(){
         printf("\n Enter details for the customer %d\n", i+1);
 
         printf("Customer ID:");
-        scanf("%u", Customer_ID);   
+        scanf("%u", &Customer_ID);   
 
         printf("Name:");
         scanf("%s", &name);        //To read the string with spaces
