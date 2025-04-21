@@ -17,9 +17,9 @@ You can also write it as
 
 int main (){
     int choice;
-    float celsius, fahrenheit;
+    float celsius, Fahrenheit;
 
-    printf("=====Temperature Converter=======");
+    printf("=====Temperature Converter=======\n");
     printf("1.  Convert Fahrenteit to Celsius\n");
     printf("2.  Convert Celsius to Fahrenteit\n");
     printf("Enter your choice (1 or 2): ");
@@ -27,17 +27,17 @@ int main (){
 
     switch(choice){
         case 1:
-        printf("Enter Temperatire in Celsius: ");
-        scanf("%f",celsius);
-        fahrenheit= (celsius * 9 / 5) + 32;
-        printf("Temperature in Fahrenheit: %.2f F",fahrenheit);
+        printf("Enter Temperature in Celsius: ");
+        scanf("%f", &celsius);
+        Fahrenheit= (celsius * 9 / 5) + 32;
+        printf("Temperature in Fahrenheit: %f F",Fahrenheit);
         break;
 
         case 2:
-        printf("Enter Temperatire in Fahrenheit: ");
-        scanf("%f",fahrenheit);
-        celsius  = (fahrenheit - 32) / 1.8;
-        printf("Temperature in celsius t: %.2f F",celsius);
+        printf("Enter Temperature in Fahrenheit: ");
+        scanf("%f",&Fahrenheit);
+        celsius  = (Fahrenheit - 32) / 1.8;
+        printf("Temperature in celsius : %f C",celsius);
         break;
 
         default:
