@@ -1,0 +1,14 @@
+======= Student Report =======
+Name       : ash
+Roll No.   : 2
++-----------+--------+
+| Subject   | Marks  |
++-----------+--------+
+| Subject 1 |   50   |
+| Subject 2 |   60   |
+| Subject 3 |   70   |
++-----------+--------+
+Total Marks: 180
+Average    : 60.00
+Grade      : C
+Remarks    : Good
