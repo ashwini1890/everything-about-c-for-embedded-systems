@@ -24,7 +24,7 @@ void displayTemperature(float temp);            // Function to display temperatu
 #define THRESHOLD 50.0
 
 int main(){
-
+    srand(time(NULL)); // Seed random number generator
     float currentTemperature;
 
     while(1) {
@@ -67,9 +67,9 @@ void displayTemperature(float temp) {
 
 // Function to check if temperature exceeds the threshold (No return type, with arguments)
 void checkTemperature(float temp) {
-    srand(time(NULL)); // Seed random number generator
+  
     if (temp >= THRESHOLD){
-        printf("ALERT: Temperature %.2f°C exceeds threshold %.2f°C! Please check the system.\n, temp, THRESHOLD");
+        printf("ALERT: Temperature %.2f°C exceeds threshold %.2f°C! Please check the system.\n", temp, THRESHOLD);
         printf("Turning on the Exhaust fan \n");
 
         sleep(3);
