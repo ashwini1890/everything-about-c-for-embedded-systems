@@ -1,0 +1,45 @@
+🔁 Reflection: Learning Functions and Scope in Embedded C
+
+Over the past few days, I dedicated focused time to strengthen my understanding of functions and variable scope in the C programming language, especially through the lens of embedded system development. By designing small simulations that reflect real-world firmware behavior, I gained valuable hands-on insights.
+🔧 What I Learned
+
+✅ Function Design for Modularity
+
+    I practiced dividing complex logic into reusable functions such as readSensor(), controlLED(), and turnOnLED().
+
+    This modular approach is directly applicable to embedded firmware, where memory and timing efficiency matter.
+
+✅ Global vs. Local Scope
+
+    I explored how global variables (like ledState) are retained throughout execution and used for state control.
+
+    Meanwhile, local variables inside functions help limit memory usage and prevent unintended access — a best practice in embedded systems.
+
+✅ Pointers and Parameter Passing
+
+    I practiced using pointers to simulate real-world behavior such as reading analog data from sensors, a concept central to microcontroller programming.
+
+✅ Using unistd.h for Simulated Delays
+
+    I included the unistd.h library in my projects to use the sleep() function, introducing delays between sensor readings — simulating real-time behavior found in embedded firmware.
+
+    Though unistd.h is specific to UNIX-like systems and not used directly in microcontrollers, it was useful for approximating timing control like that achieved using timers or delays in embedded platforms (e.g., delay() in Arduino).
+    
+✅ Parameter Passing and Pointers
+
+    By passing variables via pointers, I was able to simulate how embedded systems read sensor data and update values without global access.
+
+    I practiced pass-by-value vs. pass-by-reference, which directly relates to how microcontrollers handle memory-efficient data operations.
+
+✅ Simulated Firmware Behavior
+
+    Using functions like sleep(), rand(), and printf(), I mimicked real-time sensor monitoring, LED control, and alert logic — just like how you’d structure firmware in an Arduino or STM32 system.
+
+
+🧪 Projects and Practice
+
+    ✅ Temperature Monitoring System (with threshold alert)
+
+    ✅ Ambient Light Controlled LED (on/off logic)
+
+    ✅ Custom Practice Mini Projects to explore scopes and inter-function communication

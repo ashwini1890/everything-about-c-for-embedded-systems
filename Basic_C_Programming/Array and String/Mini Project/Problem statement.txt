@@ -1,0 +1,40 @@
+﻿📝 Problem Statement: Real-Time Sensor Fusion and Decision-Making Firmware on Arduino UNO
+Background
+In automotive and EV systems, Electronic Control Units (ECUs) continuously monitor multiple sensors (IMUs, wheel speed, voltage/current sensors, etc.) to make real-time safety and performance decisions.
+Key challenges include:
+    • Noisy sensor data → requires filtering and fusion.
+    • Multi-sensor input → must be combined for reliable state estimation.
+    • Time-critical control → ECU must decide quickly whether to continue, slow down, or stop a system.
+To simulate this concept at a prototype level, we use Arduino UNO (ATmega328P) with simulated accelerometer and gyroscope data (via ADC inputs) and a 16×2 LCD for output.
+
+Objective
+Develop firmware for Arduino UNO that:
+    1. Reads accelerometer and gyroscope signals (simulated via ADC).
+    2. Performs matrix-based fusion:
+        ◦ Matrix addition of sensor samples.
+        ◦ Per-axis averaging for stability.
+        ◦ Complementary filter for combining stable (accel) and fast (gyro) signals.
+    3. Implements decision logic based on thresholds:
+        ◦ If tilt or vibration exceeds a safe limit → STOP
+        ◦ If moderate tilt/motion detected → SLOW DOWN
+        ◦ Otherwise → CONTINUE normal operation
+    4. Displays the decision in real time on a 16×2 LCD and logs sensor values & actions via UART Serial Monitor.
+
+Scope of Application
+Although implemented on Arduino UNO, this firmware simulates core ECU functions in:
+    • 🚗 Vehicle Stability Control (VSC) → detecting unsafe tilt/motion.
+    • ⚡ EV Battery Management Systems (BMS) → averaging/filtering noisy voltage/current data.
+    • 🤖 Autonomous/ADAS Modules → fusing multiple sensors before taking action.
+    • 🖥️ Human-Machine Interfaces (HMI) → displaying control states (STOP/SLOW/CONTINUE).
+
+Expected Outcomes
+    • A working real-time firmware loop on Arduino UNO.
+    • Sensor fusion pipeline implemented with matrix math, averaging, and complementary filtering.
+    • Decision-making logic executed within 1-second control cycles.
+    • Actions displayed both on the LCD and via Serial Monitor for debugging.
+    • A scalable foundation that can later be extended with a real IMU sensor (MPU6050 via I²C).
+
+Impact
+This project demonstrates how fundamental embedded C firmware techniques — sensor acquisition, fusion, filtering, decision-making, and hardware interfacing — directly map to the control logic used in automotive ECUs and EV systems.
+
+
